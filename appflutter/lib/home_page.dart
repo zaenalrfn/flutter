@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'center_page.dart'; // Import halaman center_page.dart
+import 'sizedbox_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -24,6 +25,17 @@ class HomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const CenterPage()),
+                );
+              },
+            ),
+            const SizedBox(height: 24),
+            ElevatedButton(
+              child: const Text('Lihat Contoh SizedBox Widget'),
+              onPressed: () {
+                // Ini adalah kode untuk berpindah halaman
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SizedBoxPage()),
                 );
               },
             ),
